@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wang Xiaohua - Resume</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f6f9;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        h2 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            color: #3498db;
+        }
+
+        .section {
+            margin-top: 25px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            border: none;
+            background: #3498db;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #2980b9;
+        }
+
+        .highlight {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Wang Xiaohua</h1>
+    <p style="text-align:center;">
+        Student ID: <span class="highlight">AU114001001</span><br>
+        Asia University
+    </p>
+
+    <div class="section">
+        <h2>Profile</h2>
+        <p>
+            I am a first-year student at Asia University. 
+            I am motivated to continue my education and develop professional skills. 
+            I am interested in business, technology, and entrepreneurship.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Education</h2>
+        <ul>
+            <li>Asia University – Undergraduate Student</li>
+            <li>Major: (Your Department)</li>
+            <li>Expected Graduation: (Year)</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Skills</h2>
+        <ul>
+            <li>Basic Microsoft Office (Word, Excel, PowerPoint)</li>
+            <li>HTML, CSS, JavaScript (Beginner)</li>
+            <li>Basic Data Processing</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Career Goal</h2>
+        <p>
+            My goal is to develop professional skills and gain experience that will help me build 
+            a successful career in the future. I am also interested in starting my own business.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Contact</h2>
+        <p>Email: your_email@example.com</p>
+        <p>Phone: 09xx-xxx-xxx</p>
+    </div>
+
+    <button onclick="showMessage()">Click for Motivation</button>
+
+    <div class="footer">
+        © <span id="year"></span> Wang Xiaohua | Asia University
+    </div>
+
+</div>
+
+<script>
+    function showMessage() {
+        alert("Success is built step by step. Keep learning and improving!");
+    }
+
+    // Automatically display current year
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
