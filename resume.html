@@ -291,11 +291,7 @@ img { max-width: 100%; height: auto; }
 
                             <h1 class="home-title">ROY <b>TSAY</b></h1>
                             <h3 class="home-profession">Web Developer</h3>
-                            <audio controls>
- 
-  <source src="mp3/music.mp3" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
+
 
                             <!-- Mobile Button -->
                             <div>   
@@ -569,6 +565,25 @@ Your browser does not support the audio element.
     <a href="#" class="scrolltop" id="scroll-top">
         <i class="bx bx-up-arrow-alt scrolltop-icon"></i>
     </a>
+
+<audio id="bgm" autoplay loop playsinline>
+  <source src="mp3/music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const audio = document.getElementById("bgm");
+
+  // automatic play
+  audio.play().catch(() => {
+    // set up if muted
+    audio.muted = true;
+    audio.play();
+
+    setTimeout(() => {
+      audio.muted = false;
+    }, 100);
+  });
+</script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
