@@ -566,23 +566,24 @@ img { max-width: 100%; height: auto; }
         <i class="bx bx-up-arrow-alt scrolltop-icon"></i>
     </a>
 
-<audio id="bgm" autoplay loop playsinline>
-  <source src="mp3/music.mp3" type="audio/mpeg">
+
+
+
+<audio id="bg-music" autoplay loop>
+<source src="mp3/music.mp3" type="audio/mpeg">
 </audio>
 
 <script>
-  const audio = document.getElementById("bgm");
+const music = document.getElementById("bg-music");
 
-  // automatic play
-  audio.play().catch(() => {
-    // set up if muted
-    audio.muted = true;
-    audio.play();
-
-    setTimeout(() => {
-      audio.muted = false;
-    }, 100);
-  });
+// try autoplay
+music.volume = 0.4;
+music.play().catch(() => {
+// if autoplay blocked, start after first click
+document.addEventListener("click", () => {
+music.play();
+}, { once: true });
+});
 </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
